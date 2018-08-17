@@ -1,0 +1,58 @@
+header {
+    width: 100%;
+    height: 72px;
+    background-color:#A65900;
+}
+
+header nav{
+    margin: 0 auto;
+    width: 1250px;
+    height: 72px;
+    /*background-color:black;*/
+    overflow: hidden;
+}
+
+.logo {
+    width: 72px;
+    height: 72px;
+    background-image: url("/static/img/Logo.png");
+    float: left;
+    margin-right: 20px;
+}
+
+.logo a{
+    display: block;
+    width: 72px;
+    height: 72px;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+nav h1{
+    display: block;
+    height: 72px;
+    float: left;
+    line-height: 72px;
+    color: white;
+}
+
+nav .contact,.info,.code,.decode{
+    margin-left: 40px;
+    height: 70px;
+    background-color: #A65900;
+    float: right;
+    line-height: 70px;
+    color: white;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+nav .contact:hover,.info:hover,.code:hover,.decode:hover{
+    color: #FFA500;
+}
+
+/*按钮点击样式改变*/
+.chose{
+    border-bottom: 2px solid #FFA500;
+    color: #FFA500 !important;
+}

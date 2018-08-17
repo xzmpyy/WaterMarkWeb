@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏水印</title>
+    <meta name="keywords" content="隐藏水印，图片水印，图片版权，自媒体版权" />
+    <meta name="description" content="图片隐藏水印嵌入工具" />
+    <link rel="shortcut icon" href="/static/img/LOGO.ico">
+    <link rel="stylesheet" type="text/css" href="/static/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/banner.css">
+    <link rel="stylesheet" type="text/css" href="/static/MainBody.css">
+    <script type="text/javascript" src="/static/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="/static/MainBody.js"></script>
+    <script type="text/javascript" src="/static/clipboard.min.js"></script>
+</head>
+<body>
+    <!--banner栏-->
+    <header>
+        <nav>
+            <p class="logo" title="WaterMark">
+                <a>数字水印，隐藏水印，图片版权</a>
+            </p>
+            <h1>隐藏水印嵌入工具</h1>
+            <a class="contact">合作/联系</a>
+            <a class="info">说明</a>
+            <a class="decode">解码</a>
+            <a class="code chose">嵌入</a>
+        </nav>
+    </header>
+    <!--主体-->
+    <section>
+        <div class="UpLoadFrame display">
+            <a class="ImageButton" title="点击上传图片"></a>
+            <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+            <div class="container">
+                <div class="warning">Ready</div>
+            </div>
+        </div>
+        <div class="DecodeBlock display_none">
+            <a class="DecodeButton" title="点击上传图片"></a>
+            <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+            <div class="container2">
+                <div class="warning2">Ready</div>
+            </div>
+        </div>
+        <div class="InfoBlock display_none">
+            <a class="InfoImage" title="点击上传图片"></a>
+            <p>本站所有图标来自→<a href="https://www.easyicon.net/" target="_blank" style="color: #38b7e4;">easyicon</a>←网，如涉侵权请及时与我联系</p>
+        </div>
+        <div class="ContactBlock display_none">
+            <a class="MailImage"></a>
+            <a class="mail" id="mail">zj0714zj@163.com</a>
+            <button type="button" class="copy" onclick="CopyEmail()">复制邮箱至剪贴板</button>
+        </div>
+    </section>
+</body>
+</html>
