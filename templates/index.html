@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="/static/MainBody.css">
     <script type="text/javascript" src="/static/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="/static/MainBody.js"></script>
-    <script type="text/javascript" src="/static/clipboard.min.js"></script>
 </head>
 <body>
     <!--banner栏-->
@@ -30,7 +29,11 @@
     <!--主体-->
     <section>
         <div class="UpLoadFrame display">
-            <a class="ImageButton" title="点击上传图片"></a>
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                <a class="ImageButton" title="点击上传图片" onclick="upload()"></a>
+                <input id='FilePic' type="file" name="pic" style="display: none;">
+                <input type="submit" id="FileUpload" style="display: none;">
+            </form>
             <a class="help">点击上传图片，请勿上传2MB以上图片</a>
             <div class="container">
                 <div class="warning">Ready</div>

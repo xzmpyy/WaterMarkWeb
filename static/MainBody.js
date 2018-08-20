@@ -60,3 +60,10 @@ function CopyEmail()
         oInput.style.display='none';
         alert('复制成功');
     }
+
+// 文件上传
+function upload()
+    {
+        $('#FilePic').click();
+        $('#FileUpload').submit();
+    }
