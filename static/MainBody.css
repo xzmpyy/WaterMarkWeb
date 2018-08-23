@@ -118,6 +118,7 @@ section .InfoImage{
 
 /*嵌入进度条*/
 .warning {
+  cursor:pointer;
   position: relative;
   border: 1px solid #b5b92d;
   border-radius: 10px;
@@ -154,6 +155,7 @@ section .InfoImage{
   }
 }
 .warning:before {
+  cursor:pointer;
   content: '';
   position: absolute;
   top: 0;
@@ -248,5 +250,10 @@ section .InfoImage{
     display: block;
 }
 .display_none{
+    display: none;
+}
+
+/*隐藏上传提交*/
+#file_button,#submit_button{
     display: none;
 }

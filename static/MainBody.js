@@ -64,6 +64,30 @@ function CopyEmail()
 // 文件上传
 function upload()
     {
-        $('#FilePic').click();
-        $('#FileUpload').submit();
+        $('#file_button').click();
+    }
+function upload_start(){
+        var file = document.getElementById('file_button');
+        // 判断是否中文件
+        if(file.files[0] == undefined){
+				alert('请先上传图片，再点击开始');
+			}else{
+            // 判断文件类型
+                var file_value = file.value;
+                var index = file_value.lastIndexOf('.');
+                var file_type = file_value.substring(index);
+                // 文件类型判断
+                if(file_type == '.jpg' || file_type == '.png' || file_type == '.jpeg'){
+                    // 文件大小判断
+                    var file_size = file.files[0].size;
+                    if(file_size > 2097139){
+                        alert('图片大于2MB，请重新上传');
+                    }else{
+                        $('#submit_button').click();
+                    }
+            }
+            else{
+			    alert('只支持.jpg/.jpeg/.png格式图片，请重新选择');
+            }
+        }
     }

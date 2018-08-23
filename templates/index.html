@@ -29,14 +29,14 @@
     <!--主体-->
     <section>
         <div class="UpLoadFrame display">
-            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+            <form action="/upload" method="post" enctype="multipart/form-data">
                 <a class="ImageButton" title="点击上传图片" onclick="upload()"></a>
-                <input id='FilePic' type="file" name="pic" style="display: none;">
-                <input type="submit" id="FileUpload" style="display: none;">
+                {{ form.file_button}}
+                {{ form.submit_button}}
             </form>
             <a class="help">点击上传图片，请勿上传2MB以上图片</a>
             <div class="container">
-                <div class="warning">Ready</div>
+                <div class="warning" id="UploadStart" onclick="upload_start()">点击开始</div>
             </div>
         </div>
         <div class="DecodeBlock display_none">
@@ -49,6 +49,8 @@
         <div class="InfoBlock display_none">
             <a class="InfoImage" title="点击上传图片"></a>
             <p>本站所有图标来自→<a href="https://www.easyicon.net/" target="_blank" style="color: #38b7e4;">easyicon</a>←网，如涉侵权请及时与我联系</p>
+            <p>技术水平有限，网站任何问题请发送邮件与我联系</p>
+            <p>资金有限，服务器简易，请放心不会留存您的上传资源</p>
         </div>
         <div class="ContactBlock display_none">
             <a class="MailImage"></a>
