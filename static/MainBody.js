@@ -45,6 +45,17 @@ $(function () {
         // 显示板块内容
         $('.ContactBlock').removeClass('display_none').addClass('display');
     });
+    // 下载
+    $('.download').click(function () {
+        // 其余未选中去除样式类
+        $('.chose').removeClass('chose');
+        // 当前选中增加样式类
+        $(this).addClass('chose');
+        // 隐藏其他版块内容
+        $('.display').removeClass('display').addClass('display_none');
+        // 显示板块内容
+        $('.DownLoadFrame').removeClass('display_none').addClass('display');
+    });
 });
 
 //剪贴板复制
@@ -91,3 +102,25 @@ function upload_start(){
             }
         }
     }
+    
+//文件下载
+function image_delete(name){
+    $.post('/done',{data:name}, function (result) {
+        window.location.href=result
+    });
+}
+function download_start(){
+    $('.image_download_button').click();
+}
+function DownLoadImage(selector, name) {
+    // 通过选择器获取img元素，
+    var img = document.querySelector(selector);
+    // 将图片的src属性作为URL地址
+    var url = img.src;
+    var a = document.createElement('a');
+    var event = new MouseEvent('click');
+    a.download = name;
+    a.href = url;
+    a.dispatchEvent(event);
+    image_delete(name);
+}

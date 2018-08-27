@@ -6,7 +6,7 @@ section {
     padding-top: 60px;
 }
 
-section .UpLoadFrame,.InfoBlock,.DecodeBlock,.ContactBlock {
+section .UpLoadFrame,.InfoBlock,.DecodeBlock,.ContactBlock,.DownLoadFrame {
     /*width: 700px;*/
     height: 300px;
     margin: 0 auto;
@@ -16,7 +16,7 @@ section .UpLoadFrame,.InfoBlock,.DecodeBlock,.ContactBlock {
     overflow: hidden;
 }
 
-section .UpLoadFrame:hover,.DecodeBlock:hover,.InfoBlock:hover,.ContactBlock:hover{
+section .UpLoadFrame:hover,.DecodeBlock:hover,.InfoBlock:hover,.ContactBlock:hover,.DownLoadFrame:hover{
     border-color: #FFA500;
 }
 
@@ -28,6 +28,43 @@ section .UpLoadFrame .ImageButton{
     margin: 0 auto;
     cursor:pointer;
 }
+
+section .DownLoadFrame .DownButton{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/download.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+section .DownLoadFrame .ErrorShow{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/error.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+section .UpLoadFrame .page_400{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/404.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+section .UpLoadFrame .page_500{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/500.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
 section .DecodeButton{
     display: block;
     width: 128px;
@@ -37,7 +74,7 @@ section .DecodeButton{
     cursor:pointer;
 }
 
-section .UpLoadFrame .help{
+section .UpLoadFrame .help,.DownLoadFrame .help{
     display: block;
     width: 400px;
     height: 60px;
@@ -256,4 +293,19 @@ section .InfoImage{
 /*隐藏上传提交*/
 #file_button,#submit_button{
     display: none;
+}
+
+/*下载按钮*/
+.ReturnButton, .Return{
+    display: block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #699b15;
+    border-radius: 15px;
 }
