@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>隐藏水印</title>
+    <title>LAZYMARK</title>
     <meta name="keywords" content="隐藏水印，图片水印，图片版权，自媒体版权" />
     <meta name="description" content="图片隐藏水印嵌入工具" />
     <link rel="shortcut icon" href="/static/img/LOGO.ico">
@@ -32,28 +32,34 @@
             <form action="/upload" method="post" enctype="multipart/form-data">
                 <a class="ImageButton" title="点击上传图片" onclick="upload()"></a>
                 {{ form.file_button}}
+                <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+                {{ form.code_filed }}
                 {{ form.submit_button}}
             </form>
-            <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+            <div style="height: 18px;"></div>
             <div class="container">
                 <div class="warning" id="UploadStart" onclick="upload_start()">点击开始</div>
             </div>
         </div>
         <div class="DecodeBlock display_none">
-            <a class="DecodeButton" title="点击上传图片"></a>
-            <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+            <form action="/decode" method="post" enctype="multipart/form-data">
+                <a class="DecodeButton" title="点击上传图片" onclick="decode_get()"></a>
+                <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+                {{ form.decode_button}}
+                {{ form.decode_submit}}
+            </form>
             <div class="container2">
-                <div class="warning2">Ready</div>
+                <div class="warning2" id="DecodeStart" onclick="decode_start()">开始提取</div>
             </div>
         </div>
         <div class="InfoBlock display_none">
-            <a class="InfoImage" title="点击上传图片"></a>
+            <a class="InfoImage" title="说明"></a>
             <p>本站所有图标来自→<a href="https://www.easyicon.net/" target="_blank" style="color: #38b7e4;">easyicon</a>←网，如涉侵权请及时与我联系</p>
             <p>技术水平有限，网站任何问题请发送邮件与我联系</p>
             <p>资金有限，服务器简易，请放心不会留存您的上传资源</p>
         </div>
         <div class="ContactBlock display_none">
-            <a class="MailImage"></a>
+            <a class="MailImage" title="邮箱"></a>
             <a class="mail" id="mail">zj0714zj@163.com</a>
             <button type="button" class="copy" onclick="CopyEmail()">复制邮箱至剪贴板</button>
         </div>

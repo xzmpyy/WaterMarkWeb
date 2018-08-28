@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>隐藏水印</title>
+    <title>LAZYMARK</title>
     <meta name="keywords" content="隐藏水印，图片水印，图片版权，自媒体版权" />
     <meta name="description" content="图片隐藏水印嵌入工具" />
     <link rel="shortcut icon" href="/static/img/LOGO.ico">
@@ -12,7 +12,7 @@
     <script type="text/javascript" src="/static/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="/static/MainBody.js"></script>
 </head>
-<body>
+<body onbeforeunload="leave_delete('{{ file_save_name}}')">
     <!--banner栏-->
     <header>
         <nav>
@@ -31,7 +31,7 @@
             <a class="DownButton" title="点击下载图片" onclick="download_start()"></a>
             <a class="help" style="color: #699b15; width: 500px;">点击下载图片</a>
             <a class="help" style="color: #699b15; width: 500px;">本站不保存您的资源，请及时下载，避免数据丢失</a>
-            <a href="/" class="ReturnButton">返回首页</a>
+            <a href="/" class="ReturnButton" onclick="image_delete('{{ file_save_name}}')">返回首页</a>
             <img src="{{ file_path }}" class="deal_image" style="display: none;">
             <input class="image_download_button" type="button" value="download_image" style="display: none;" onclick="DownLoadImage('.deal_image', '{{ file_save_name}}')">
         </div>
