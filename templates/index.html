@@ -31,6 +31,7 @@
         <div class="UpLoadFrame display">
             <form action="/upload" method="post" enctype="multipart/form-data">
                 <a class="ImageButton" title="点击上传图片" onclick="upload()"></a>
+                {{ form.csrf_token }}
                 {{ form.file_button}}
                 <a class="help">点击上传图片，请勿上传2MB以上图片</a>
                 {{ form.code_filed }}
@@ -45,6 +46,7 @@
             <form action="/decode" method="post" enctype="multipart/form-data">
                 <a class="DecodeButton" title="点击上传图片" onclick="decode_get()"></a>
                 <a class="help">点击上传图片，请勿上传2MB以上图片</a>
+                {{ form.csrf_token }}
                 {{ form.decode_button}}
                 {{ form.decode_submit}}
             </form>
@@ -62,6 +64,10 @@
             <a class="MailImage" title="邮箱"></a>
             <a class="mail" id="mail">zj0714zj@163.com</a>
             <button type="button" class="copy" onclick="CopyEmail()">复制邮箱至剪贴板</button>
+        </div>
+        <div class="noted">
+            <p>嵌入水印的图片均为PNG格式</p>
+            <p>水印信息防剪裁、涂抹攻击，暂时不支持图片压缩攻击</p>
         </div>
     </section>
 </body>

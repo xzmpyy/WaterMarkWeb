@@ -65,6 +65,33 @@ section .UpLoadFrame .page_500{
     cursor:pointer;
 }
 
+section .UpLoadFrame .page_small{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/small.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+section .UpLoadFrame .page_none{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/nocode.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+section .UpLoadFrame .page_result{
+    display: block;
+    width: 128px;
+    height: 128px;
+    background: url("/static/img/watermark.png");
+    margin: 0 auto;
+    cursor:pointer;
+}
+
 section .UpLoadFrame .storage_error{
     display: block;
     width: 128px;
@@ -329,4 +356,14 @@ section .InfoImage{
     cursor: pointer;
     background-color: #699b15;
     border-radius: 15px;
+}
+
+.noted{
+    margin-top: 45px;
+    width: 1250px;
+}
+.noted{
+    text-align: center;
+    color: #a65900;
+    font-weight: bold;
 }

@@ -94,6 +94,7 @@ function upload_start(){
                     if(file_size > 2097139){
                         alert('图片大于2MB，请重新上传');
                     }else{
+                        $('.warning').text("正在处理");
                         $('#submit_button').click();
                     }
             }
@@ -152,6 +153,7 @@ function decode_start(){
                     if(file_size > 2097139){
                         alert('图片大于2MB，请重新上传');
                     }else{
+                        $('.warning2').text("正在解码");
                         $('#decode_submit').click();
                     }
             }
