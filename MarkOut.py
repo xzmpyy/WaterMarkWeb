@@ -91,7 +91,10 @@ class LazyMarkOut(object):
         # 按顺序形成最终列表
         deal_list = []
         for num in range(len(count_dic)):
-            deal_list.append(count_dic[num])
+            try:
+                deal_list.append(count_dic[num])
+            except:
+                pass
         return deal_list
 
     # 解码主函数
