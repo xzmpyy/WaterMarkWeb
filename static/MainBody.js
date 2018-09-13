@@ -94,8 +94,17 @@ function upload_start(){
                     if(file_size > 2097139){
                         alert('图片大于2MB，请重新上传');
                     }else{
-                        $('.warning').text("正在处理");
-                        $('#submit_button').click();
+                        //1到15位英文，空格组成
+                        var verify = /^[A-Za-z ]{1,15}$/;
+                        var code_str = document.getElementById("code_filed").value;
+                        //水印码校验
+                        if (verify.test(code_str)){
+                            $('.warning').text("正在处理");
+                            $('#submit_button').click();
+                        }else {
+                            alert('请输入1至15位英文或空格组成的水印码');
+                            document.getElementById("code_filed").value='';
+                        }
                     }
             }
             else{
